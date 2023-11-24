@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div> 
-      <h1>Estos son los resultados:</h1>
+      <h1>Estos son los resultados: ; ; </h1>
       
     </div>
   );
