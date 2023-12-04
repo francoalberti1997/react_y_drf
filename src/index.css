@@ -10,10 +10,10 @@
 }
 
 
-*{
-  padding: 0;
+body, html {
   margin: 0;
-  overflow-x: hidden;
+  padding: 0;
+  overflow-x: hidden; /* Para evitar el desplazamiento horizontal en general */
 }
 
 nav{
@@ -23,7 +23,6 @@ nav{
   background: rgb(15, 20, 27);
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(247, 0, 0, 0.09);
-  overflow: visible; /* Permite que el contenido desbordado sea visible */
 }
 
 #navbar{
@@ -38,7 +37,7 @@ nav{
   list-style: none;
   padding: 0 20px;
   position: relative;
-  overflow: visible; /* Permite que el contenido desbordado sea visible */
+  /* overflow: visible;  */
 
 }
 
@@ -85,25 +84,28 @@ nav{
 }
 
 @media screen and (max-width: 769px){
+
   #navbar{
+    position: fixed;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: absolute;
     top: 71px;
-    right: -500px;
-    width: 300px;
+    transform: translateX(1500px);
+    transition: transform 1s ease;
     background-color: var(--azul_oscuro);
     box-shadow: 0 5px 7.5px var(--rojo_claro);
     padding: 40px 0 120px 10px;
-    transition: right ease-in 0.2s;
-    overflow: visible; /* Permite que el contenido desbordado sea visible */
     height: 80vh;
-
   }
   
   #navbar.active{
-   right: 0px;
+    
+    /* right: 0; */
+    transform: translateX(0);
+    width: 80%;
+  
   }
   #navbar li{
     margin-bottom: 25px;
@@ -115,7 +117,6 @@ nav{
     background-color: var(--rojo_claro);
     opacity: 1;
     border-radius: 5px;
-    overflow: visible; /* Permite que el contenido desbordado sea visible */
   }
 
   #mobile i{
@@ -124,13 +125,10 @@ nav{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    overflow: visible; /* Permite que el contenido desbordado sea visible */
-
   }
 
   #logo_li{
     display: inline;
-    overflow: visible; /* Permite que el contenido desbordado sea visible */
     position: relative;
     top: 0;
   }
