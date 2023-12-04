@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --rojo_claro:rgb(255, 93, 87);
+  --gris_claro:rgb(122, 120, 120);
+  --azul_oscuro:rgb(15, 20, 27);
+  --rojo_oscuro:  rgba(247, 0, 0, 0.09);
+
+
+  
+  ; /* Definición de una variable llamada color-primario con el valor rojo */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(15, 20, 27);
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(247, 0, 0, 0.09);
+  overflow: visible; /* Permite que el contenido desbordado sea visible */
+}
+
+#navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  /* width: 100%; */
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  overflow: visible; /* Permite que el contenido desbordado sea visible */
+
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  overflow: visible; /* Permite que el contenido desbordado sea visible */
+
+}
+
+#navbar li a:hover,
+#navbar li a.active
+{
+  color: var(--rojo_claro);
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after
+{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: var(--rojo_claro);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  overflow: visible; /* Permite que el contenido desbordado sea visible */
+
+}
+
+#mobile i{
+  color: #fff;
+  cursor: pointer;
+}
+
+#mobile{
+  display: none;
+}
+
+#logo_li{
+  display: none;
+}
+
+@media screen and (max-width: 769px){
+  #navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 71px;
+    right: -300px;
+    width: 300px;
+    background-color: var(--azul_oscuro);
+    box-shadow: 0 5px 7.5px var(--rojo_claro);
+    padding: 40px 0 120px 10px;
+    transition: right ease-in 0.2s;
+    overflow: visible; /* Permite que el contenido desbordado sea visible */
+    height: 80vh;
+
+  }
+  
+  #navbar.active{
+   right: 0px;
+  }
+  #navbar li{
+    margin-bottom: 25px;
+  }
+
+  #mobile{
+    display: block;
+    padding: 10px;
+    background-color: var(--rojo_claro);
+    opacity: 1;
+    border-radius: 5px;
+    overflow: visible; /* Permite que el contenido desbordado sea visible */
+  }
+
+  #mobile i{
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow: visible; /* Permite que el contenido desbordado sea visible */
+
+  }
+
+  #logo_li{
+    display: inline;
+    overflow: visible; /* Permite que el contenido desbordado sea visible */
+    position: relative;
+    top: 0;
+  }
+
+  #logo_li img{
+    width: 100px;
+    height: 65px;
+    border-radius: 60px;
+    /* margin: 65px; */
+  }
+  }
