@@ -98,13 +98,14 @@ nav{
     box-shadow: 0 5px 7.5px var(--rojo_claro);
     padding: 40px 0 120px 10px;
     height: 80vh;
+    width: 80%;
+
   }
   
   #navbar.active{
     
     /* right: 0; */
     transform: translateX(0);
-    width: 80%;
   
   }
   #navbar li{
