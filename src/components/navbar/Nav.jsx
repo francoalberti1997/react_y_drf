@@ -20,7 +20,7 @@ const Nav_c = () => {
             <li><a href="">Sobre Mí</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href="">Contacto</a></li>
-            {clicked ? <li id='logo_li'><img src={logo_n} alt="" /></li> : null}
+            {/* {clicked ? <li id='logo_li'><img src={logo_n} alt="" /></li> : null} */}
           </ul>
         </div>
 
