@@ -91,7 +91,7 @@ nav{
     justify-content: flex-start;
     position: absolute;
     top: 71px;
-    right: -300px;
+    right: -500px;
     width: 300px;
     background-color: var(--azul_oscuro);
     box-shadow: 0 5px 7.5px var(--rojo_claro);
