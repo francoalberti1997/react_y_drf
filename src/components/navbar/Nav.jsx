@@ -13,13 +13,13 @@ const Nav_c = () => {
   return (
     <>
       <nav>
-        <img src={logo} alt="" />
+        <img src={logo} alt=""  id='logo-nav'/>
         <div className='div-navbar'>
           <ul id='navbar' className={clicked ? 'active' : ''}>
-            <li><a href="" className='active'>Home</a></li>
-            <li><a href="">Sobre Mí</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="" className='active'>Home <i class="fa-solid fa-house"></i></a></li>
+            <li><a href="">Sobre Mí<i class="fa-solid fa-user-tie"></i></a></li>
+            <li><a href="">Servicios <i class="fa-solid fa-bell-concierge"></i></a></li>
+            <li><a href="">Contacto <i class="fa-solid fa-address-book"></i></a></li>
             {/* {clicked ? <li id='logo_li'><img src={logo_n} alt="" /></li> : null} */}
           </ul>
         </div>
