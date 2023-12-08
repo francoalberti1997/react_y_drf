@@ -5,8 +5,8 @@ import "../../index.css"
 const About = () => {
   return (
     <div id='about' className='about'>
-        <p className='section__text_p1'>Get to Know More</p>
-        <h1 className='title'>About Me</h1>
+        <p className='section__text_p1'>Conoce más</p>
+        <h1 className='title'>Sobre mí</h1>
         
         <div className='section-container'>
             

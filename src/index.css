@@ -260,7 +260,7 @@ nav{
 /*ABOUT SECTION*/
 
 .about{
-  max-height: 1900px;
+  max-height: 2100px;
   /* min-height: 1500px; */
   width: 100%;
   position: absolute;
@@ -275,6 +275,7 @@ nav{
 
 #about .title{
   color: #131313;
+  padding: 10px;
 }
 
 .about-containers{
@@ -365,6 +366,10 @@ nav{
 .about  .section__pic-container img{
   height: 100%;
   width: 100%;
+  transition: box-shadow 0.5s ease;
+}
+.about  .section__pic-container img:hover{
+  box-shadow: #ffffff5e -8px 5px, #ffffff5e -3px 5px;
 }
 
 .text-container{
@@ -625,6 +630,17 @@ nav{
 }
 
   }
+
+@media screen and (max-width: 400px){
+
+  .about .details-container{
+    width: 100px;
+    box-sizing: border-box;
+    padding: 5px;
+    /* background-color: red; */
+  }
+}
+
 
 @media screen and (max-height: 320px){
   #navbar{
