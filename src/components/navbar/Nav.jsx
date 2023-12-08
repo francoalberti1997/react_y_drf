@@ -16,8 +16,8 @@ const Nav_c = () => {
         <img src={logo} alt=""  id='logo-nav'/>
         <div className='div-navbar'>
           <ul id='navbar' className={clicked ? 'active' : ''}>
-            <li><a href="#profile" className='active' onClick={toggleMenu}>Home <i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#about" onClick={toggleMenu}>Sobre Mí<i class="fa-solid fa-user-tie"></i></a></li>
+            <li><a href="#profile" className='active'>Home <i class="fa-solid fa-house"></i></a></li>
+            <li><a href="">Sobre Mí<i class="fa-solid fa-user-tie"></i></a></li>
             <li><a href="">Servicios <i class="fa-solid fa-bell-concierge"></i></a></li>
             <li><a href="">Contacto <i class="fa-solid fa-address-book"></i></a></li>
             {/* {clicked ? <li id='logo_li'><img src={logo_n} alt="" /></li> : null} */}
