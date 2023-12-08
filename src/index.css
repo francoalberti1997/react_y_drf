@@ -1,14 +1,15 @@
 :root {
   --rojo_claro:rgb(255, 69, 69);
+  --rojo_claro-d:rgb(255, 69, 69, 0.8);
   --gris_claro:rgb(122, 120, 120);
   --azul_oscuro:rgb(15, 20, 27);
   --rojo_oscuro:  rgba(247, 0, 0, 0.09);
-
+  --cards:rgb(255, 69, 69);
 
   
   ; /* Definición de una variable llamada color-primario con el valor rojo */
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@100&family=Lato&family=Mulish:ital,wght@1,500&family=Oswald:wght@200;700&family=Pixelify+Sans:wght@500&family=Playfair+Display&family=Poppins:wght@100&family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@200&display=swap');
 
 body, html {
@@ -23,6 +24,8 @@ body, html {
   font-family: 'Roboto Slab', serif;
   font-family: 'Bebas Neue', sans-serif;
   font-family: 'Kanit', sans-serif;
+  width: 100%;
+
 }
 
 nav{
@@ -116,10 +119,12 @@ nav{
   background-color: var(--rojo_claro);
   width: 100%;
   top: 122px;
+  height: 600px;
 }
 
-section{
+#section{
   padding-top: 4vh;
+  width: 100%;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -128,7 +133,6 @@ section{
 
 .section-container{
   display: flex;
-  background-color: blue;
 }
 
 #profile{
@@ -197,7 +201,7 @@ section{
 .fa-brands{
   cursor: pointer;
   font-size: 2rem;
-  color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
 }
 
 .btn-container{
@@ -232,16 +236,11 @@ section{
 }
 
 .btn-color-2{
-  background: none;
+  background: var(--rojo_claro-d);
   font-weight: 700;
 }
 
-.btn-color-2:hover{
-  border: #fff 0.1rem solid;
-  color: rgb(252, 8, 8);
-}
-
-.btn-color-1:hover{
+.btn-color-1:hover, .btn-color-2:hover{
   border: #fff 0.1rem solid;
   background-color: rgb(0, 0, 0);
   color: rgb(249, 249, 249);
@@ -258,12 +257,239 @@ section{
   width: 100%;
 }
 
-@media screen and (max-width: 769px){
+/*ABOUT SECTION*/
 
+.about{
+  max-height: 1900px;
+  /* min-height: 1500px; */
+  width: 100%;
+  position: absolute;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 82, 234, 0.3); 
+  top: 720px;
+}
+
+#about .title{
+  color: #131313;
+}
+
+.about-containers{
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+
+.about-details-container{
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.about-containers, 
+.about-details-container{
+  display: flex;
+}
+
+.about-pic{
+  border-radius: 2rem;
+}
+
+#about .fa-house{
+  /* position: absolute; */
+  /* right: -5rem; */
+  bottom: 2.5rem;
+}
+
+.about-details-container{
+  justify-content: center;
+  /* flex-direction: flex; */
+  display: flex;
+  align-items: center; 
+}
+
+.about-containers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .details-container{
+  position: relative;
+  padding: 1rem;
+  flex: 1;
+  margin: auto auto;
+  /* background: white; */
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rebeccapurple;
+  text-align: center;
+  min-width: 300px;
+  max-width: 320px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 160px;
+}
+
+.about-containers .details-container h3{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.about .section-container{
+  gap: 2rem;
+  margin: auto auto;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+.about .section__pic-container{
+  height: 300px;
+  width: 300px;
+  margin: auto auto;
+  
+}
+
+.about  .section__pic-container img{
+  height: 100%;
+  width: 100%;
+}
+
+.text-container{
+  background-color: rgba(207, 207, 207, 0.5);
+  padding: 10px;
+  text-align: center;
+  color: #131313;
+  border-radius: 45px;
+}
+
+
+.about .details-container{
+  min-width: 280px;
+  height: 425px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  transition: all 0.6s ease;
+  display: block;
+  text-align: center; /* Opcional: centra los elementos horizontalmente */
+}
+
+.about .about-details-container .img{
+  height: 100px;
+  background-size: cover;
+}
+
+#img1{
+  background-image: url("https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_1280.jpg");
+}
+
+#img2{
+  background-image: url("https://www.esan.edu.pe/images/blog/2016/10/25/proyectoempresarial-principal.jpg");
+}
+
+#img3{
+  background-image: url("https://i0.wp.com/rashimmogha.com/wp-content/uploads/2017/12/superpower.png?fit=874%2C374&ssl=1");
+}
+.content-about{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-weight: 300;
+}
+
+.content-about h3{
+  width: 200px;
+  font-weight: 300;
+  font-size: 30px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid  var(--cards);
+}
+
+.content-about p{
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+
+.content-about a{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.content-about button{
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 100;
+  font-size: 20px;
+  color: var(--cards);
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffac1c26;
+  transition: 0.2s ease-in-out;
+}
+
+.details-container:hover{
+  box-shadow: var(--rojo_claro-d) -10px 10px, var(--rojo_claro-d) -20px 20px ;
+}
+
+.section__text_p1{
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1007px)and (min-width: 769px){
+  #about{
+    position: absolute;
+    top: 720px;
+  }
+}
+
+
+@media screen and (max-width: 769px){
+ 
   nav{
     position: fixed;
     box-sizing: border-box;
     width: 100%;
+  }
+
+  .section__text_p1{
+    margin-top: 80px;
+  }
+
+  #about{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 835px;
+
+  }
+
+  #profile{
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: green;
   }
 
   #navbar li a i{
@@ -329,6 +555,7 @@ section{
     /* height: 100vh; */
     margin-bottom: 6rem;
     display: block;
+    width: 100%;
   }
 
   #profile{
@@ -380,6 +607,23 @@ section{
   .fa-brands{
     color: aquamarine;
   }
+
+
+  .about-containers{
+    display: flex;
+    flex-direction: column;
+  }
+  .details-container{
+    width: 300px;
+  }
+  
+ .section-container{
+  /* height: 100vh; */
+  margin-bottom: 6rem;
+  display: block;
+  width: 100%;
+}
+
   }
 
 @media screen and (max-height: 320px){

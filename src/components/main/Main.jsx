@@ -11,9 +11,9 @@ const Main = () => {
   return (
     <>
       <section id="profile" className='main'>
-        <div className='section__pic-container'>
+        {/* <div className='section__pic-container'>
           <img src={img_mia} alt="" />
-        </div>
+        </div> */}
 
         <div className='section__text'>
           <p className='section__text_p1'>
