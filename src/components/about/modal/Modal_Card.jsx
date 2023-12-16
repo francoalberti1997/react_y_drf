@@ -17,7 +17,7 @@ const Modal_Card = (props) => {
 
   useEffect(() => {
     // Realizar la solicitud GET al montar el componente
-    axios.get(`https://railwaydrf-production.up.railway.app/api/${campo}/`)
+    axios.get(`http://127.0.0.1:8000/api/${campo}/`)
       .then(response => {
         // Actualizar el estado con los datos recibidos
         setField(response.data);
@@ -50,6 +50,7 @@ const Modal_Card = (props) => {
                     <p className="descripcion-modal">{titulo.descripcion}</p>
                     <a href={titulo.link}><img src={titulo.img} alt="" width={"200px"} height={"200px"} className="img-modal"/></a>
                     {titulo.motivacion ? <p className="descripcion-modal">{titulo.motivacion}</p> : <></>}
+                    <p className="estado">{titulo.estado}</p>
 
                   </div>
                 </article>

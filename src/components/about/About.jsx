@@ -1,16 +1,53 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../../index.css"
 import Modal from './modal/Modal'
 import img_about from "../about/img1.jpg"
 
 const About = () => {
-  
+  const [dynamicText, setDynamicText] = useState('');
+  const words = ['Fullstack developer', 'Emprendedor', 'Estudiante de Ingeniería'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  useEffect(() => {
+    const typeEffect = () => {
+      const currentWord = words[wordIndex];
+      const currentChar = isDeleting
+        ? currentWord.substring(0, charIndex - 1)
+        : currentWord.substring(0, charIndex + 1);
+
+      setDynamicText(currentChar);
+
+      if (!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typeEffect, 200);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 100);
+      } else {
+        isDeleting = !isDeleting;
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1200);
+      }
+    };
+
+    const intervalId = setTimeout(() => {
+      typeEffect();
+    }, 2000); // Start the typing effect after 2 seconds
+
+    return () => clearTimeout(intervalId);
+  }, []);
+
 
   return (
     <div id='about' className='about'>
-        <p className='section__text_p1'>Conoce más</p>
-        <h1 className='title'>Sobre mí</h1>
+        <h1 className='title' id='sobre-mi'>Sobre mí</h1>
         
+        <div className='twdiv'><h1 className='tw-h1'>
+        Soy <span>{dynamicText}</span>
+      </h1></div>
+
         <div className='section-container'>
             
             <div className='section__pic-container'>
@@ -24,6 +61,7 @@ const About = () => {
           </div>
         </div>
     </div>
+
     </div>
   )
 }

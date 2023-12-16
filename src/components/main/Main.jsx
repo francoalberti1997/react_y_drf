@@ -22,6 +22,7 @@ const Main = () => {
           <h1 className='title'>
             Franco Alberti
           </h1>
+
           <p className='section__text_p2'>
             Especialista en Negocios Digitales
           </p>

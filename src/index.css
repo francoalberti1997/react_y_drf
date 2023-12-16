@@ -1,10 +1,13 @@
 :root {
-  --rojo_claro:rgb(255, 69, 69);
-  --rojo_claro-d:rgb(255, 69, 69, 0.8);
+  /* --rojo_claro:rgb(255, 69, 69); */
+  --rojo_claro: rgba(230,167,235,255);
+
+  --rojo_claro-d:rgba(230,167,235,255);
   --gris_claro:rgb(122, 120, 120);
   --azul_oscuro:rgb(15, 20, 27);
   --rojo_oscuro:  rgba(247, 0, 0, 0.09);
-  --cards:rgb(255, 69, 69);
+  --cards:rgba(230,167,235,255);
+  --metal-tex: url(https://images.unsplash.com/photo-1501166222995-ff31c7e93cef?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTcyMDc2NzU&ixlib=rb-1.2.1&q=80);
 
   
   ; /* Definición de una variable llamada color-primario con el valor rojo */
@@ -270,8 +273,9 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 82, 234, 0.3); 
+  background: rgba(0, 50, 143, 0.3); 
   top: 720px;
+
 }
 
 #about .title{
@@ -482,6 +486,7 @@ nav{
   z-index: 99;
   bottom: 0;
   position: fixed;
+  
 }
 
 
@@ -503,6 +508,9 @@ nav{
   border-radius: 3px;
   text-align: center;
   overflow-y: scroll;
+  background-image: url("https://e0.pxfuel.com/wallpapers/262/342/desktop-wallpaper-business-background-business-business-computer-and-business-digital-corporate-abstract.jpg");
+  background-size: contain;
+  opacity: 0.95;
   border-radius: 15px;
 }
 
@@ -577,6 +585,217 @@ background-color: rebeccapurple;}
   font-weight: 800;
 }
 
+.estado{
+  background-color: rgb(0, 0, 0, 0.3);
+  color: #fff;
+  font-weight: 800;
+}
+
+
+.main-metal{
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metal {
+  position: relative;
+  /* margin: 15vh auto; */
+  color: transparent;
+  font-family: impact, sans-serif;
+  font-size: 85px;
+  letter-spacing: 0.05em;
+  background-image: var(--metal-tex);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.texture,
+.texture::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.texture {
+  background-image: linear-gradient(to bottom, blue, white 50%, red 65%, white);
+  background-attachment: fixed;
+  mix-blend-mode: color-dodge;
+}
+
+.texture::after {
+  content: '';
+  background-image: var(--metal-tex);
+  background-size: cover;
+  filter: saturate(0) brightness(0.8) contrast(4);
+  mix-blend-mode: multiply;
+}
+
+.about-franco{
+  background-color: #12121252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-franco a{
+  text-decoration: none;
+}
+
+.about-franco{
+  gap: 100px;
+  top: 3500px;
+  width: 100%;
+  position: absolute;
+  color: #ffff;
+}
+
+.about__title{
+  color: #ffc100;
+  font-size: 60px;
+}
+
+.about__subtitle{
+  padding: 10px 0 20px;
+}
+
+.about__text{
+  line-height: 28px;
+}
+
+.about__social{
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about__social-img{
+  display: block;
+  width: 100%;
+}
+
+.about__social-link{
+  padding: 10px;
+  width: 60px;
+  display: block;
+  border-radius: 15px;
+  border: 3px solid #ffc100;
+  transition: background-color 0.3s;
+}
+
+.about__social-link{
+  background-color: #ffc100
+}
+
+.about__btn{
+  display: block;
+  width: max-content;
+  padding: 20px 40px;
+  background-color: #ffc100;
+  border-radius: 50px;
+  color: #121212;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.about__social-link:hover{
+  background-color: #83807a
+}
+
+
+.about__btn:hover{
+  background-color: #8d887b;
+}
+
+
+/*Type Writer*/
+
+
+.tw-h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 900;
+  /* background-color: var(--rojo_claro); */
+}
+.tw-h1 span {
+  color: #fbe8ca;
+  position: relative;
+  
+}
+.tw-h1 span::before {
+  content: "";
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  background:  var(--rojo_claro);
+  box-shadow: #121212 5px;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+
+.twdiv{
+  text-align: center;
+  height: 80px;
+  padding: 5px;
+  max-width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+#sobre-mi {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3em;
+  background-image: linear-gradient(var(--rojo_claro), var(--rojo_claro));
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+   transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+#sobre-mi:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}
+
+
+@media screen and (max-width: 850px){
+  .about-franco{
+    flex-wrap: wrap;
+  }
+
+  .about__img-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 
 @media screen and (max-width: 1007px)and (min-width: 769px){
   #about{
@@ -588,6 +807,11 @@ background-color: rebeccapurple;}
 
 @media screen and (max-width: 769px){
  
+  .tw-h1 {
+    font-size: 2rem;
+    /* background-color: var(--rojo_claro); */
+  }
+
   nav{
     position: fixed;
     box-sizing: border-box;
@@ -756,6 +980,12 @@ background-color: rebeccapurple;}
     padding: 5px;
     /* background-color: red; */
   }
+
+  .tw-h1 {
+    font-size: 1.4rem;
+    /* background-color: var(--rojo_claro); */
+  }
+
 
   .modal-content {
   background-color: #d6d6d6;

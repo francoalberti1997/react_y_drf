@@ -3,6 +3,7 @@ import axios from 'axios';
 import Nav_c from './components/navbar/Nav';
 import Main from './components/main/Main';
 import About from './components/about/About';
+import Footer from './components/footer/Footer';
 
 
 function App() {
