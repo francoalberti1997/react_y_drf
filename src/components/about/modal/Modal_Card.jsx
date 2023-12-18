@@ -10,14 +10,12 @@ const Modal_Card = (props) => {
 
   const textoCapitalizado = campo_capitalize.charAt(0).toUpperCase() + campo_capitalize.slice(1);
 
-
-
   const [titulos, setField] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     // Realizar la solicitud GET al montar el componente
-    axios.get(`https://railwaydrf-production.up.railway.app/api/${campo}/`)
+    axios.get(`https://react-y-drf.vercel.app/api/${campo}/`)
       .then(response => {
         // Actualizar el estado con los datos recibidos
         setField(response.data);
