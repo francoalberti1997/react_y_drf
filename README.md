@@ -11,3 +11,9 @@ Frontend alojado en Vercel conectado a una API provista por Django, localizada e
 *Login Section
 
 *TypeWriter Effect en nav (full-stack, especialista en neg digitales, emprendedor)
+
+preloader
+
+paleta de colores 
+    
+WWW REDIRIGIR

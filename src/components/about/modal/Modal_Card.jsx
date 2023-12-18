@@ -17,7 +17,7 @@ const Modal_Card = (props) => {
 
   useEffect(() => {
     // Realizar la solicitud GET al montar el componente
-    axios.get(`http://127.0.0.1:8000/api/${campo}/`)
+    axios.get(`https://railwaydrf-production.up.railway.app/api/${campo}/`)
       .then(response => {
         // Actualizar el estado con los datos recibidos
         setField(response.data);
