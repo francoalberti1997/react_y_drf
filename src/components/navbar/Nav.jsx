@@ -19,7 +19,7 @@ const Nav_c = () => {
             <li><a href="#profile" onClick={toggleMenu} className='active'>Home <i class="fa-solid fa-house"></i></a></li>
             <li><a href="#Servicios">Servicios <i class="fa-solid fa-bell-concierge"></i></a></li>
             <li><a href="#sobre-mi" onClick={toggleMenu}>Sobre Mí<i class="fa-solid fa-user-tie"></i></a></li>
-            <li><a href="">Contacto <i class="fa-solid fa-address-book"></i></a></li>
+            <li><a href="#formularios">Contacto <i class="fa-solid fa-address-book"></i></a></li>
             {/* {clicked ? <li id='logo_li'><img src={logo_n} alt="" /></li> : null} */}
           </ul>
         </div>

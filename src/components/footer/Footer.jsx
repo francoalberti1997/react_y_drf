@@ -31,7 +31,7 @@ const Footer = () => {
         mensaje: mensaje
       };
   
-      const respuesta = await axios.post('http://127.0.0.1:8000/api/contacto/', payload, {
+      const respuesta = await axios.post('https://railwaydrf-production.up.railway.app/api/contacto/', payload, {
         headers: {
           'Content-Type': 'application/json' // Set headers if required
         }
@@ -76,7 +76,7 @@ const Footer = () => {
   return (
     <>
     {!formulario ? <form action="" onSubmit={handleSubmit}>
-    <div class="form">
+    <div class="form" id='formularios'>
       <div class="title-form">Contacto</div>
       <div class="input-container ic1">
         <input id="firstname" class="input" type="text" placeholder=" " value={nombre}
