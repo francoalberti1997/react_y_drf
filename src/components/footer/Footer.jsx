@@ -38,6 +38,7 @@ const Footer = () => {
       });
   
       if(respuesta.status == 201){
+        console.log(respuesta)
         setFormulario(prevState => !prevState);
       }
 
@@ -75,54 +76,54 @@ const Footer = () => {
 
   return (
     <>
-    {!formulario ? <form action="" onSubmit={handleSubmit}>
-    <div class="form" id='formularios'>
-      <div class="title-form">Contacto</div>
-      <div class="input-container ic1">
-        <input id="firstname" class="input" type="text" placeholder=" " value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
+  <div className="form" id='formularios'>
+    {!formulario ? (
+      <form action="" onSubmit={handleSubmit}>
+        <div className="title-form">Contacto</div>
+        <div className="input-container ic1">
+          <input id="firstname" className="input" type="text" placeholder=" " value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
           />
-        <div class="cut"></div>
-        <label for="firstname" class="placeholder">Nombre</label>
-      </div>
+          <div className="cut"></div>
+          <label htmlFor="firstname" className="placeholder">Nombre</label>
+        </div>
 
-      <div class="input-container ic2">
-        <input id="lastname" class="input" type="text" placeholder=" " value={celular}
-          onChange={(e) => setCelular(e.target.value)}/>
-        <div class="cut"></div>
-        <label for="celular" class="placeholder">Celular</label>
-      </div>
+        <div className="input-container ic2">
+          <input id="lastname" className="input" type="text" placeholder=" " value={celular}
+            onChange={(e) => setCelular(e.target.value)}
+          />
+          <div className="cut"></div>
+          <label htmlFor="celular" className="placeholder">Celular</label>
+        </div>
 
-      <div class="input-container ic2">
-        <input id="email" class="input" type="text" placeholder=" " value={mail}
-          onChange={(e) => setEmail(e.target.value)}/>
-        <div class="cut cut-short"></div>
-        <label for="email" class="placeholder">Email</label>
-      </div>
-      <div className="input-container ic2" id="">
-      <textarea
-        id="mensaje"
-        className="input"
-        style={{ resize: "none", width: "100%", height: "80px" }} // Establecer un ancho y alto fijo
-        placeholder=" " value={mensaje} type="text"
-        onChange={(e) => setMensaje(e.target.value)}
-      ></textarea>
-      <div className="cut cut-short"></div>
-      <label htmlFor="mensaje" className="placeholder">
-        Mensaje
-      </label>
-    </div>
-      <button type="submit" className="submit" onClick={handleClick}>Submit</button>
-    </div>
-  </form> : 
-  
-  <div className={`form ${formulario ? 'active' : ''}`}>
-    <p className='section__text_p1'>Gracias por tu Mensaje. Me contactaré contigo pronto.</p>
+        <div className="input-container ic2">
+          <input id="email" className="input" type="text" placeholder=" " value={mail}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <div className="cut cut-short"></div>
+          <label htmlFor="email" className="placeholder">Email</label>
+        </div>
+        <div className="input-container ic2" id="">
+          <textarea
+            id="mensaje"
+            className="input"
+            style={{ resize: "none", width: "100%", height: "80px" }}
+            placeholder=" " value={mensaje} type="text"
+            onChange={(e) => setMensaje(e.target.value)}
+          ></textarea>
+          <div className="cut cut-short"></div>
+          <label htmlFor="mensaje" className="placeholder">Mensaje</label>
+        </div>
+        <button type="submit" className="submit" onClick={handleClick}>Submit</button>
+      </form>
+    ) : (
+      // <div>
+        <p className='section__text_p1'>Gracias por tu Mensaje. Me contactaré contigo pronto.</p>
+      // </div>
+    )}
   </div>
+</>
 
-
-  }
-    </>
         )
 }
 

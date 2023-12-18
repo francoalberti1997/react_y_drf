@@ -17,3 +17,9 @@ preloader
 paleta de colores 
     
 WWW REDIRIGIR
+
+admin django in production
+
+LOGIN LOGOUT SYSTEM
+
+Arreglar Html
