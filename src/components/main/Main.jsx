@@ -70,12 +70,12 @@ const Main = () => {
           
           <div className='btn-container'>
             <button onClick={openPDF} className='btn btn-color-2'>Abrir PDF</button>
-            <button className='btn btn-color-1'>Contact Info</button>
+            <button className='btn btn-color-1'><a class="whats-app" href="https://wa.me/+541176385223?text=¡Hola Franco! ." target="" id="wsp">Contacto Wsp</a></button>
           </div>
 
           <div id='socials-container'>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>          
+          <a href="https://www.linkedin.com/in/franco-alberti-3248b7224/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/francoalberti1997/"><i class="fa-brands fa-github"></i> </a>         
           </div>  
         </div>
         

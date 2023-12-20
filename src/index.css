@@ -565,7 +565,7 @@ background-color: rebeccapurple;}
   align-items: center;
   justify-content: center;
   margin: auto;
-  width: 300px;
+  max-width: 300px;
   height: 600px;
   box-sizing: border-box;
 }
@@ -913,6 +913,14 @@ background-color: rebeccapurple;}
   transform: translateY(8px);
 }
 
+.whats-app{
+  color: var(--rojo_claro) !important;
+}
+
+.whats-app:hover{
+  color: var(--rojo_claro);
+}
+
 .placeholder {
   color: #65657b;
   font-family: sans-serif;
@@ -956,6 +964,15 @@ background-color: rebeccapurple;}
 
 .mensaje:hover{
   box-shadow: none;
+}
+
+.whats-app{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.whats-app:hover{
+  color: rgb(255, 255, 255);
 }
 
 .forms {
@@ -1007,6 +1024,10 @@ background-color: rebeccapurple;}
   html div{
     overflow: auto; 
     max-width: 100%; 
+  }
+
+  .about-containers{
+    width: 100%;
   }
 
   .tw-h1 {
@@ -1118,10 +1139,6 @@ background-color: rebeccapurple;}
 
   .section-container{
     margin-left: 250px;
-  }
-
-  section{
-    margin: 0 5%;
   }
 
   .section__pic-container{
