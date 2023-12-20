@@ -774,7 +774,7 @@ background-color: rebeccapurple;}
 .dc-txt{
   max-width: 100%;
   margin: 15px;
-  max-height: 1500px;
+  max-height: 2200px;
   background-color: none;
   border-radius: 10px;
   padding: 10px;
@@ -1193,7 +1193,6 @@ background-color: rebeccapurple;}
 
   .tw-h1 {
     font-size: 1.7rem;
-    background-color: var(--rojo_claro);
   }
 
   .twdiv{
@@ -1207,6 +1206,10 @@ background-color: rebeccapurple;}
   width: 240px;
   display: flex;
   justify-content: center;
+}
+
+.section__text_p1{
+  font-size: 1.4rem;
 }
 
 }
