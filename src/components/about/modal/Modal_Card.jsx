@@ -19,7 +19,7 @@ const Modal_Card = (props) => {
     axios.get(`https://railwaydrf-production.up.railway.app/api/${campo}/`)
       .then(response => {
         // Actualizar el estado con los datos recibidos
-        console.log(response.data)
+        // console.log(response.data)
         setField(response.data);
       })
       .catch(error => {

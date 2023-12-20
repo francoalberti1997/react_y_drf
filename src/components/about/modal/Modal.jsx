@@ -28,9 +28,9 @@ const Modal = (props) => {
             root.classList.remove('nueva-clase-root');
         }
 
-        console.log("Activado");
+        // console.log("Activado");
     } else {
-        console.log("Elemento no encontrado");
+        // console.log("Elemento no encontrado");
     }
 };
   return(
