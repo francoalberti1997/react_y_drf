@@ -1261,7 +1261,6 @@ background-color: rebeccapurple;}
 #mobile{
   display: block;
   padding: 10px;
-  background-color: var(--rojo_claro);
   opacity: 1;
   border-radius: 5px;
 

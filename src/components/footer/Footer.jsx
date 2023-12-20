@@ -38,24 +38,23 @@ const Footer = () => {
       });
   
       if(respuesta.status == 201){
-        console.log(respuesta)
         setFormulario(prevState => !prevState);
       }
 
     } catch (error) {
       if (error.response) {
         // Request made and server responded with an error status
-        console.log(error.response.data);
-        console.log(error.response.status);
-        console.log(error.response.headers);
+        // console.log(error.response.data);
+        // console.log(error.response.status);
+        // console.log(error.response.headers);
       } else if (error.request) {
         // The request was made but no response was received
-        console.log(error.request);
+        // console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an error
-        console.log('Error', error.message);
+        // console.log('Error', error.message);
       }
-      console.error('Error al enviar la petición:', error);
+      // console.error('Error al enviar la petición:', error);
     }
   };
   
@@ -68,7 +67,6 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    console.log("Estado del formulario actualizado:", formulario);
   }, [formulario]);
   
 
