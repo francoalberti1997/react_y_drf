@@ -47,9 +47,6 @@ const About = () => {
 
   return (
     <div id='about' className='about'>
-         
-        
-
         <div className="dc-txt" id="Services">
           <h2 className='section__text_p2' >Mis Servicios <i class="fa-solid fa-bell-concierge"></i></h2>        
           <p className='section__text_p1'><i class="fa-solid fa-computer"></i>Me dedico a desarrollar presencia en línea a emprendimientos, utilizando la tecnología para potenciar su éxito.</p>
