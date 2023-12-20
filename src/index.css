@@ -123,6 +123,7 @@ nav{
   width: 100%;
   top: 122px;
   height: 600px;
+  overflow-y: hidden;
 }
 
 #section{
@@ -195,6 +196,8 @@ nav{
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+  overflow-y: hidden;
+
   gap: 1rem;
 }
 
@@ -211,6 +214,7 @@ nav{
   display: flex;
   justify-content: center;
   gap: 1rem;
+  
 }
 
 .btn{
@@ -392,7 +396,7 @@ nav{
 
 
 .about .details-container{
-  min-width: 280px;
+  /* min-width: 180px; */
   height: 425px;
   background-color: rgb(255,255,255,0.88);
   border-radius: 10px;
@@ -866,6 +870,13 @@ background-color: rebeccapurple;}
 
 .ic2 {
   margin-top: 30px;
+  overflow-y: hidden;
+}
+
+.section-container{
+  overflow-y: hidden;
+  overflow-x: hidden;
+
 }
 
 .input {
@@ -891,11 +902,11 @@ background-color: rebeccapurple;}
   transform: translateY(0);
   transition: transform 200ms;
   width: 76px;
-}
+} 
 
 .cut-short {
   width: 50px;
-}
+} 
 
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
@@ -914,17 +925,10 @@ background-color: rebeccapurple;}
   top: 20px;
 }
 
-.input:focus ~ .placeholder,
-.input:not(:placeholder-shown) ~ .placeholder {
-  transform: translateY(-30px) translateX(10px) scale(0.75);
-}
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #808097;
-}
-
-.input:focus ~ .placeholder {
-  color: #dc2f55;
+  color: #000000;
+  display: none;
 }
 
 .submit {
@@ -1099,6 +1103,7 @@ background-color: rebeccapurple;}
     margin-bottom: 6rem;
     display: block;
     width: 100%;
+    overflow-x: hidden;
   }
 
   #profile{
@@ -1164,7 +1169,9 @@ background-color: rebeccapurple;}
   display: block;
   width: 100%;
 }
-
+.tw-h1 {
+  font-size: 1.7rem;
+}
 
   }
 
@@ -1177,10 +1184,23 @@ background-color: rebeccapurple;}
     /* background-color: red; */
   }
 
-  .tw-h1 {
-    font-size: 1.4rem;
-    /* background-color: var(--rojo_claro); */
+  .about-containers, .about-details-container, .section-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
+
+
+  .tw-h1 {
+    font-size: 1.7rem;
+    background-color: var(--rojo_claro);
+  }
+
+  .twdiv{
+    height: 260px;
+    background-color: #06b;
+  }
+
 
 
   .modal-content {
@@ -1201,7 +1221,10 @@ background-color: rebeccapurple;}
   display: flex;
   justify-content: center;
 }
-
+.details-container{
+  width: 180px !important;
+  /* background-color: red !important; */
+}
 }
 
 
