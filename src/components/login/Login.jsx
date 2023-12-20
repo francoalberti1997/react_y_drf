@@ -12,7 +12,7 @@ function LoginForm() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/login/', {
+      const response = await axios.post('https://railwaydrf-production.up.railway.app/login/', {
         username: username,
         password: password
       },  {headers: {
