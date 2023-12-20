@@ -23,14 +23,14 @@ const About = () => {
 
       if (!isDeleting && charIndex < currentWord.length) {
         charIndex++;
-        setTimeout(typeEffect, 200);
+        setTimeout(typeEffect, 150);
       } else if (isDeleting && charIndex > 0) {
         charIndex--;
-        setTimeout(typeEffect, 100);
+        setTimeout(typeEffect, 75);
       } else {
         isDeleting = !isDeleting;
         wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
-        setTimeout(typeEffect, 1200);
+        setTimeout(typeEffect, 900);
       }
     };
 
@@ -50,7 +50,7 @@ const About = () => {
          
         
 
-        <div className="dc-txt" >
+        <div className="dc-txt" id="Services">
           <h2 className='section__text_p2' >Mis Servicios <i class="fa-solid fa-bell-concierge"></i></h2>        
           <p className='section__text_p1'><i class="fa-solid fa-computer"></i>Me dedico a desarrollar presencia en línea a emprendimientos, utilizando la tecnología para potenciar su éxito.</p>
           <p className='section__text_p1'><i class="fa-regular fa-comment"></i>Ofrezco capacitación en inglés, centrada en el desarrollo de habilidades comunicativas efectivas.</p>

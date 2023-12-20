@@ -13,11 +13,13 @@ const Modal_Card = (props) => {
   const [titulos, setField] = useState(null);
   const [error, setError] = useState(null);
 
+
   useEffect(() => {
     // Realizar la solicitud GET al montar el componente
-    axios.get(`https://react-y-drf.vercel.app/api/${campo}/`)
+    axios.get(`https://railwaydrf-production.up.railway.app/api/${campo}/`)
       .then(response => {
         // Actualizar el estado con los datos recibidos
+        console.log(response.data)
         setField(response.data);
       })
       .catch(error => {
@@ -25,6 +27,7 @@ const Modal_Card = (props) => {
         setError(error);
       });
   }, []); // El segundo argumento [] indica que esto se ejecuta solo una vez al montar el componente
+  
 
   return (
     <section className='experience'>
@@ -37,24 +40,25 @@ const Modal_Card = (props) => {
           </div>
           <div className='about-containers'>
 
-            {titulos ? titulos.map((titulo, index) => (
-              <div className="details-container" key={index}>
-                <article>
-                  <div className="contenedor-modal-info">
-                    <div className="contenedor-texto-modal">
-                      <h2 className="experience-sub-title">{titulo.nombre}</h2>
-                      <h3>{titulo.puesto}</h3>
+          {
+            Array.isArray(titulos) ? (
+              titulos.map((titulo, index) => (
+                <div className="details-container" key={index}>
+                  <article>
+                    <div className="contenedor-modal-info">
+                      <div className="contenedor-texto-modal">
+                        <h2 className="experience-sub-title">{titulo.nombre}</h2>
+                        <h3>{titulo.puesto}</h3>
+                      </div>
+                      <p className="descripcion-modal">{titulo.descripcion}</p>
+                      <a href={titulo.link}><img src={titulo.img} alt="" width={"200px"} height={"200px"} className="img-modal"/></a>
+                      {titulo.motivacion ? <p className="descripcion-modal">{titulo.motivacion}</p> : <></>}
+                      <p className="estado">{titulo.estado}</p>
                     </div>
-                    <p className="descripcion-modal">{titulo.descripcion}</p>
-                    <a href={titulo.link}><img src={titulo.img} alt="" width={"200px"} height={"200px"} className="img-modal"/></a>
-                    {titulo.motivacion ? <p className="descripcion-modal">{titulo.motivacion}</p> : <></>}
-                    <p className="estado">{titulo.estado}</p>
-
-                  </div>
-                </article>
-              </div>
-            ))
-            : (
+                  </article>
+                </div>
+              ))
+            ) : (
               <p>Loading...</p>
             )
           }
