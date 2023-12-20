@@ -788,6 +788,31 @@ background-color: rebeccapurple;}
   margin-right: 15px;
 }
 
+.contenedor-contacto{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+.contacto{
+  width:300px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  background-color: #dc2f55; 
+  color: #fff;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 #sobre-mi {

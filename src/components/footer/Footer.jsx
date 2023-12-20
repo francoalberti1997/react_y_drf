@@ -31,7 +31,7 @@ const Footer = () => {
         mensaje: mensaje
       };
   
-      const respuesta = await axios.post('https://railwaydrf-production.up.railway.app/api/contacto/', payload, {
+      const respuesta = await axios.post('https://react-y-drf.vercel.app/api/contacto/', payload, {
         headers: {
           'Content-Type': 'application/json' // Set headers if required
         }
